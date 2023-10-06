@@ -15,6 +15,16 @@ namespace Homework_06_10
         public Form1()
         {
             InitializeComponent();
+
+            
+            treeView1.BeforeSelect += new TreeViewCancelEventHandler(treeView1_BeforeSelect);
+
         }
+
+        private void treeView1_BeforeSelect(object sender, TreeViewCancelEventArgs e)
+        {
+            e.Cancel = true; 
+        }
+
     }
 }
